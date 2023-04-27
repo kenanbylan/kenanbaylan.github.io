@@ -4,10 +4,10 @@
 :root {
   --color-body: #b6cbce;
   --color-heading: #eef3db;
-  --color-base: #033f47;
-  --color-base2: #022a30;
+  --color-base: #576cbc;
+  --color-base2: #0b2447;
   --color-brand: #0£780;
-  --color-brand2: #deff58;
+  --color-brand2: #20262e;
   --sidbar-width: 240px;
   --font-base: "Bai Jamjuree";
 }
@@ -43,7 +43,7 @@ img {
 }
 
 .text-brand {
-  color: var(--color-brand2);
+  color: grey;
 }
 
 .bg-base {
@@ -66,19 +66,26 @@ img {
 }
 
 .shadow-effect:hover {
-  box-shadow: -6px 6px 0 0 var(--color-brand2);
+  box-shadow: -6px 6px 0 0 var(--color-body);
+}
+
+.top-box {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
 }
 
 .iconbox {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   font-size: 20px;
-  background-color: var(--color-brand2);
-  color: var(--color-base);
+  background-color: var(--color-base2);
+  color: var(--color-heading);
 }
 
 /** NAVBAR **/
@@ -115,7 +122,7 @@ img {
   .navbar {
     min-height: 100vh;
     width: var(--sidbar-width);
-    background: linear-gradient(rgba(3, 63, 71, 0.7), rgba(3, 63, 71, 0.7)), url("../images/sidebar-img.jpg");
+    /* background: linear-gradient(rgba(3, 63, 71, 0.7), rgba(3, 63, 71, 0.7)), url("../images/sidebar-img.jpg"); */
     background-size: cover;
     background-position: center;
   }
@@ -136,9 +143,9 @@ img {
   font-weight: 700;
 }
 .btn-brand {
-  background-color: var(--color-brand2);
-  color: var(--color-base);
-  border: 2px solid var(--color-brand2);
+  background-color: var(--color-bran);
+  color: var(--color-heading);
+  border: 2px solid var(--color-heading);
   transition: all 0.4s ease;
 }
 
@@ -175,16 +182,15 @@ img {
 /* CUSTOM CARD */
 
 .card-custom {
-  width: 90%;
-  height: 100%;
+  width: 200px;
   overflow: hidden;
 }
 
 /* burada bir hata var */
 .card-custom .card-custom-image {
-  overflow: hidden;
   width: 100%;
-  height: 200px;
+  height: auto;
+  overflow: hidden;
 }
 
 .card-custom .card-custom-image img {
@@ -193,10 +199,14 @@ img {
 }
 
 .card-custom:hover .card-custom-image img {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .card-custom-content {
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
 }
 
 .cardView {
@@ -204,7 +214,6 @@ img {
 }
 
 /* content  */
-
 #contact .form-control {
   background-color: var(--color-base);
   border: 2px solid var(--color-base);
@@ -213,7 +222,7 @@ img {
 
 #contact .form-control:focus {
   box-shadow: none;
-  border: 2px solid var(--color-brand2);
+  border: 2px solid var(--color-body);
 }
 
 #contact .form-control::placeholder {
@@ -221,6 +230,12 @@ img {
 }
 #contact input.form-control {
   height: 50px;
+}
+
+.project-text {
+  color: var(--color-heading);
+  font-weight: 100;
+  font-family: var(--font-base), sans-serif;
 }
 
 /* SOCIA MEDIA ICONS */
@@ -248,11 +263,18 @@ img {
 /* footer-text */
 
 .footer-text {
-  color: var(--color-brand2);
+  color: var(--color-heading);
 }
 
 .service {
+  width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.service-text {
+  color: var(--color-heading);
+  font-weight: 500;
 }
 
 /* Sertifikalar alanı hakkında css kodları. */
@@ -260,4 +282,30 @@ img {
 .card-sertifikalar {
   width: 50%;
   overflow: hidden;
+}
+
+.text-education {
+  color: var(--color-base2);
+  font-weight: 500;
+}
+
+/* Skills sayfası component yapısı. */
+
+.skills-content {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
